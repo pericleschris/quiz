@@ -1,3 +1,7 @@
+:root {
+  --background-primary: #834fa0;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,11 +10,31 @@
 
 html,
 body {
+  background: var(--background-primary);
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.container {
+  max-width: 43.75rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 }
