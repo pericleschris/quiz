@@ -20,3 +20,10 @@ export const fontSemiBold = localFont({
   variable: "--font-semibold",
   display: "swap",
 });
+
+export const fontLight = localFont({
+  src: "../fonts/GibsonLightIt.otf",
+  weight: "300",
+  variable: "--font-light",
+  display: "swap",
+});
