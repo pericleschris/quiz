@@ -13,6 +13,7 @@ body {
   background: var(--background-primary);
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: var(--font-regular);
 }
 
 img {
@@ -35,6 +36,7 @@ a {
 .app {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
+  padding: 2rem 0;
 }

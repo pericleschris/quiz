@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { fontBold, fontRegular, fontSemiBold } from "@/functions/font";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="app">{children}</body>
+      <body className={`${fontBold.variable} ${fontRegular.variable} ${fontSemiBold.variable} app`}>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
