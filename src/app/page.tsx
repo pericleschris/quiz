@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "@/components/button.module.css";
 import Link from "next/link";
 
 export default function Home() {
@@ -15,7 +14,7 @@ export default function Home() {
         style={{ marginTop: "2rem" }}
       />
       <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-        <Link href={"/welcome"} className={styles.button}>
+        <Link href={"/welcome"} className="button">
           Entrar
         </Link>
       </div>
