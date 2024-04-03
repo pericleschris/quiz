@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./welcome.module.css";
 import Link from "next/link";
 
-export default function Welcome() {
+export default function WelcomePage() {
   return (
     <section className="container text-center">
       <div className={styles.subcontainer}>
@@ -26,8 +26,8 @@ export default function Welcome() {
             desenvolverem como cidadãos conscientes de seus direitos e deveres. O resultado disso é uma convivência
             saudável com os colegas, a escola, a família e a sociedade em geral.
           </p>
-          <Link href={"/game"} className="button" style={{ marginTop: "1rem" }}>
-            Avançar
+          <Link href={"/start"} className="button" style={{ marginTop: "1rem" }}>
+            Começar
           </Link>
         </div>
         <div>

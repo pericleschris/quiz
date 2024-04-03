@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <section className="container">
       <Image src={"/assets/logotipo.svg"} width={695} height={242} alt="Logotipo" priority />
