@@ -1,7 +1,11 @@
+import Card from "@/components/card";
+
 export default function QuizPage() {
   return (
-    <section>
-      <h1>Quiz</h1>
+    <section className="app">
+      <div className="container">
+        <Card />
+      </div>
     </section>
   );
 }
