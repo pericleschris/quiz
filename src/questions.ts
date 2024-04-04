@@ -1,4 +1,15 @@
-export const questions = [
+type Question = {
+  questionText: string;
+  image: string;
+  options: Option[];
+};
+
+type Option = {
+  optionText: string;
+  character: string;
+};
+
+export const questions: Question[] = [
   {
     questionText:
       "Quando uma pessoa te conta a história de um filme conhecido, que você assistiu mais de uma vez. O que você faz?",
