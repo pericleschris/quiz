@@ -51,13 +51,13 @@ p {
 }
 
 .heading-secondary {
-  font-size: 58px;
+  font-size: 48px;
   font-family: var(--font-bold);
   margin-bottom: 1rem;
 }
 
 .heading-third {
-  font-size: 46px;
+  font-size: 32px;
   font-family: var(--font-bold);
   color: var(--color-third);
   margin-bottom: 1rem;
