@@ -14,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${fontBold.variable} ${fontRegular.variable} ${fontSemiBold.variable} ${fontLight.variable} app`}
-      >
+      <body className={`${fontBold.variable} ${fontRegular.variable} ${fontSemiBold.variable} ${fontLight.variable}`}>
         <main>{children}</main>
       </body>
     </html>

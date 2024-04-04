@@ -1,5 +1,6 @@
 :root {
   --background-primary: #834fa0;
+  --background-secondary: #2484c6;
   --base-color: #fff;
   --color-third: #ffc907;
 }
@@ -77,4 +78,8 @@ p {
   padding: 1rem 4rem;
   box-sizing: border-box;
   transition: 0.1s;
+}
+
+.bg-secondary {
+  background: var(--background-secondary);
 }
