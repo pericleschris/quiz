@@ -1,6 +1,8 @@
 import React from "react";
 import Tolerany from "@/components/characters/tolerany";
 import Compaixudo from "@/components/characters/compaixudo";
+import Paciencio from "@/components/characters/paciencio";
+import Perseveroso from "@/components/characters/perseveroso";
 import Button from "@/components/button";
 
 export type Props = {
@@ -23,6 +25,10 @@ export default function Thanks({ result }: Props) {
         return <Tolerany result={result} />;
       case "Compaixudo":
         return <Compaixudo result={result} />;
+      case "Paciêncio":
+        return <Paciencio result={result} />;
+      case "Perseveroso":
+        return <Perseveroso result={result} />;
       default:
         return null;
     }

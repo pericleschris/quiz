@@ -1,9 +1,26 @@
+import React from "react";
 import { Props } from "../thanks";
+import Image from "next/image";
 
-export default function Tolerany({result}: Props) {
+export default function Tolerany({ result }: Props) {
+  React.useEffect(() => {
+    document.body.style.background = "#2484C6";
+    return () => {
+      document.body.style.background = "";
+    };
+  }, []);
+
   return (
     <>
-      <h1>Tolerany</h1>
+      <div className="text-center">
+        <h1 className="heading-primary">{result}</h1>
+        <Image src={"/assets/tolerany.png"} alt="Tolerany" width={1000} height={600} />
+        <p className="heading-third">A tolerância é muito importante para quem quer viver bem em sociedade</p>
+        <p>
+          É a virtude que nos faz reconhecer e aceitar as diferenças no jeito de ser, pensar e agir dos outros. A
+          tolerância vem sempre junto com o respeito.
+        </p>
+      </div>
     </>
   );
 }

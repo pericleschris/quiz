@@ -2,7 +2,7 @@ import React from "react";
 import { Props } from "../thanks";
 import Image from "next/image";
 
-export default function Compaixudo({ result }: Props) {
+export default function Perseveroso({ result }: Props) {
   React.useEffect(() => {
     document.body.style.background = "#2484C6";
     return () => {
@@ -14,11 +14,11 @@ export default function Compaixudo({ result }: Props) {
     <>
       <div className="text-center">
         <h1 className="heading-primary">{result}</h1>
-        <Image src={"/assets/compaixudo.png"} alt="Compaixudo" width={1000} height={600} />
-        <p className="heading-third">A compaixão nos faz entender que todos somos humanos e frágeis</p>
+        <Image src={"/assets/perseveroso.png"} alt="Perseveroso" width={1000} height={600} />
+        <p className="heading-third">O perseveroso nunca desiste</p>
         <p>
-          A compaixão é a virtude que nos faz sentir as dores dos outros como se fossem as nossas, e nos desperta a
-          vontade de ajudar.
+          Ser perseverante é ser dono da sua própria vontade e seguir no caminho desejado, sem desistir quando aparecem
+          as dificuldades.
         </p>
       </div>
     </>
