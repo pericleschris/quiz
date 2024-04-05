@@ -7,8 +7,8 @@ import styles from "@/components/card.module.css";
 import { questions } from "@/questions";
 
 export default function Card() {
-  const [currentQuestion, setCurrentQuestion] = React.useState<number>(0);
-  const [answer, setAnswer] = React.useState<{ [key: number]: string }>({});
+  const [currentQuestion, setCurrentQuestion] = React.useState<number | null>(0);
+  const [answers, setAnswers] = React.useState<{ [key: number]: string }>({});
   const [selectedOption, setSelectedOption] = React.useState<string | null>(null);
 
   function handleOptionChange(character: string) {
@@ -17,13 +17,44 @@ export default function Card() {
 
   function handleClick() {
     if (selectedOption) {
-      setAnswer({ ...answer, [currentQuestion]: selectedOption });
-      if (currentQuestion + 1 < questions.length) {
+      setAnswers({ ...answers, [currentQuestion!]: selectedOption });
+      if (currentQuestion !== null && currentQuestion + 1 < questions.length) {
         setCurrentQuestion(currentQuestion + 1);
         setSelectedOption(null);
+      } else {
+        setCurrentQuestion(null);
       }
     }
   }
+
+  interface CharacterCounts {
+    [character: string]: number;
+  }
+
+  function calculateResult(): string {
+    const characterCounts: CharacterCounts = {};
+    questions.forEach((question, index) => {
+      const selectedCharacter = answers[index];
+      if (selectedCharacter) {
+        if (characterCounts[selectedCharacter]) {
+          characterCounts[selectedCharacter]++;
+        } else {
+          characterCounts[selectedCharacter] = 1;
+        }
+      }
+    });
+    let maxCount = 0;
+    let resultCharacter = "";
+    for (const character in characterCounts) {
+      if (characterCounts[character] > maxCount) {
+        maxCount = characterCounts[character];
+        resultCharacter = character;
+      }
+    }
+    return resultCharacter;
+  }
+
+  const result = currentQuestion === null ? calculateResult() : null;
 
   return (
     <div>
@@ -61,7 +92,7 @@ export default function Card() {
         </>
       ) : (
         <div>
-          <h2>Você é mais parecido com</h2>
+          <h2>Você é mais parecido com {result}</h2>
         </div>
       )}
     </div>
