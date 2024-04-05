@@ -50,6 +50,12 @@ p {
   padding: 2rem 0;
 }
 
+.heading-primary {
+  font-size: 52px;
+  font-family: var(--font-bold);
+  margin-bottom: 1rem;
+}
+
 .heading-secondary {
   font-size: 48px;
   font-family: var(--font-bold);

@@ -2,9 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import Button from "./button";
+import Button from "@/components/button";
 import styles from "@/components/card.module.css";
 import { questions } from "@/questions";
+import Thanks from "@/components/thanks";
 
 export default function Card() {
   const [currentQuestion, setCurrentQuestion] = React.useState<number | null>(0);
@@ -91,9 +92,7 @@ export default function Card() {
           </div>
         </>
       ) : (
-        <div>
-          <h2>Você é mais parecido com {result}</h2>
-        </div>
+        <Thanks result={result!} />
       )}
     </div>
   );

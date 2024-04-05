@@ -1,0 +1,24 @@
+.grafismo::before {
+  content: "";
+  width: 215px;
+  height: 254px;
+  display: block;
+  background: url("/assets/grafismo-roxo-small.png") no-repeat top;
+  background-size: contain;
+  top: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.grafismo::after {
+  content: "";
+  width: 234px;
+  height: 424px;
+  display: block;
+  background: url("/assets/grafismo-amarelo.png") no-repeat top;
+  background-size: contain;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 10;
+}
