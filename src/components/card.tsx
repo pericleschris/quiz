@@ -74,7 +74,7 @@ export default function Card() {
           </div>
           <div className={styles.cardOptions}>
             {questions[currentQuestion].options.map((option, index) => (
-              <div key={index}>
+              <div key={index} className={styles.cardOptionItem}>
                 <input
                   type="radio"
                   name="options"

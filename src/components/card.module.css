@@ -4,6 +4,7 @@
   min-height: 150px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .cardHeader p {
@@ -14,10 +15,15 @@
 .cardOptions {
   background: #fff;
   padding: 1.875rem 2rem;
-  min-height: 150px;
+  min-height: 225px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.cardOptionItem {
+  display: flex;
+  align-items: flex-start;
 }
 
 .cardOptions label {
