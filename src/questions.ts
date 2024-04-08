@@ -13,7 +13,7 @@ export const questions: Question[] = [
   {
     questionText:
       "Quando uma pessoa te conta a história de um filme conhecido, que você assistiu mais de uma vez. O que você faz?",
-    image: "/assets/question-1.jpg",
+    image: "/sesi/assets/question-1.jpg",
     options: [
       { optionText: "Pratico a escuta ativa", character: "Paciêncio" },
       { optionText: "Não gosto, mas ouço", character: "Tolerany" },
@@ -23,7 +23,7 @@ export const questions: Question[] = [
   },
   {
     questionText: "Você está na fila do banco há 2 horas",
-    image: "/assets/question-2.jpg",
+    image: "/sesi/assets/question-2.jpg",
     options: [
       { optionText: "Continuo aguardando a minha vez", character: "Paciêncio" },
       { optionText: "Fico super incomodado com as pessoas reclamando, mas tolero", character: "Tolerany" },
@@ -36,7 +36,7 @@ export const questions: Question[] = [
   },
   {
     questionText: "No trânsito, a pessoa de trás buzina sem parar para você. Como você reage?",
-    image: "/assets/question-3.jpg",
+    image: "/sesi/assets/question-3.jpg",
     options: [
       { optionText: "O trânsito é isso mesmo. Isso não me afeta", character: "Paciêncio" },
       { optionText: "Fico extremamente irritado, mas é preciso suportar", character: "Tolerany" },
@@ -49,7 +49,7 @@ export const questions: Question[] = [
   },
   {
     questionText: "Quando você explica algo mais de uma vez e o seu (a sua) colega não entende. Como você reage?",
-    image: "/assets/question-4.jpg",
+    image: "/sesi/assets/question-4.jpg",
     options: [
       { optionText: "Explico mais uma vez", character: "Paciêncio" },
       {
@@ -66,7 +66,7 @@ export const questions: Question[] = [
   {
     questionText:
       "Imagine que você está participando de uma prova de corrida em dupla, mas a sua dupla começa a sentir dores nas pernas e chega em seu limite. Qual das opções abaixo você mais se identifica?",
-    image: "/assets/question-5.jpg",
+    image: "/sesi/assets/question-5.jpg",
     options: [
       {
         optionText: "Procuro me manter calmo, mesmo sabendo que não conseguiremos finalizar a prova",
@@ -85,7 +85,7 @@ export const questions: Question[] = [
   },
   {
     questionText: "Um (a) colega está triste por um motivo que os demais julgam ser infantil. O que você faz?",
-    image: "/assets/question-6.jpg",
+    image: "/sesi/assets/question-6.jpg",
     options: [
       {
         optionText: "Entendo que o tempo vai passar e tudo vai ficar bem",
@@ -105,7 +105,7 @@ export const questions: Question[] = [
   {
     questionText:
       "Imagine que você está praticando o seu esporte favorito. Outra pessoa te empurra deslealmente, mas, em seguida, ela mesma cai e machuca um dos braços. Qual a sua primeira reação?",
-    image: "/assets/question-7.jpg",
+    image: "/sesi/assets/question-7.jpg",
     options: [
       {
         optionText: "Mesmo sendo empurrado, não me sinto ofendido e faço o que deve ser feito",

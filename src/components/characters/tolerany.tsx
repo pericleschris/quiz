@@ -15,7 +15,7 @@ export default function Tolerany({ result }: Props) {
     <>
       <div className="text-center">
         <h1 className="heading-primary">{result}</h1>
-        <Image src={"/assets/tolerany.png"} alt="Tolerany" width={1000} height={600} />
+        <Image src={"/sesi/assets/tolerany.png"} alt="Tolerany" width={1000} height={600} />
         <p className="heading-third">A tolerância é muito importante para quem quer viver bem em sociedade</p>
         <p>
           É a virtude que nos faz reconhecer e aceitar as diferenças no jeito de ser, pensar e agir dos outros. A

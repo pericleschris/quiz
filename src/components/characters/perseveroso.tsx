@@ -15,7 +15,7 @@ export default function Perseveroso({ result }: Props) {
     <>
       <div className="text-center">
         <h1 className="heading-primary">{result}</h1>
-        <Image src={"/assets/perseveroso.png"} alt="Perseveroso" width={1000} height={600} />
+        <Image src={"/sesi/assets/perseveroso.png"} alt="Perseveroso" width={1000} height={600} />
         <p className="heading-third">O perseveroso nunca desiste</p>
         <p>
           Ser perseverante é ser dono da sua própria vontade e seguir no caminho desejado, sem desistir quando aparecem
