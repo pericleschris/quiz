@@ -1,6 +1,7 @@
 import React from "react";
 import { Props } from "../thanks";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Tolerany({ result }: Props) {
   React.useEffect(() => {
@@ -20,6 +21,9 @@ export default function Tolerany({ result }: Props) {
           É a virtude que nos faz reconhecer e aceitar as diferenças no jeito de ser, pensar e agir dos outros. A
           tolerância vem sempre junto com o respeito.
         </p>
+        <Link href={"/"} className="button">
+          Finalizar
+        </Link>
       </div>
     </>
   );

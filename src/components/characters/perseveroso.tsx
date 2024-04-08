@@ -1,6 +1,7 @@
 import React from "react";
 import { Props } from "../thanks";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Perseveroso({ result }: Props) {
   React.useEffect(() => {
@@ -20,6 +21,9 @@ export default function Perseveroso({ result }: Props) {
           Ser perseverante é ser dono da sua própria vontade e seguir no caminho desejado, sem desistir quando aparecem
           as dificuldades.
         </p>
+        <Link href={"/"} className="button">
+          Finalizar
+        </Link>
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function WelcomePage() {
   return (
-    <section className="app">
+    <section className="app animeLeft">
       <div className="container text-center">
         <div className={styles.subcontainer}>
           <div>
@@ -13,7 +13,7 @@ export default function WelcomePage() {
               width={695}
               height={61}
               alt="Grafismo"
-              style={{ marginBottom: "4rem" }}
+              style={{ margin: "0 auto 4rem auto" }}
             />
           </div>
           <div>
@@ -37,7 +37,7 @@ export default function WelcomePage() {
               width={695}
               height={61}
               alt="Grafismo"
-              style={{ marginTop: "4rem" }}
+              style={{ margin: "4rem auto 0 auto" }}
             />
           </div>
         </div>

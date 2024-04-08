@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <section className="app">
+    <section className="app animeLeft">
       <div className="container">
         <Image src={"/assets/logotipo.svg"} width={695} height={242} alt="Logotipo" priority />
         <Image

@@ -1,6 +1,7 @@
 import React from "react";
 import { Props } from "../thanks";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Paciencio({ result }: Props) {
   React.useEffect(() => {
@@ -20,6 +21,9 @@ export default function Paciencio({ result }: Props) {
           A paciência é a virtude de espera. Saber que cada coisa tem seu tempo e é preciso respeitá-lo. É ter
           tranquilidade, mesmo quando as coisas não estão seguindo do jeito que você gostaria.
         </p>
+        <Link href={"/"} className="button">
+          Finalizar
+        </Link>
       </div>
     </>
   );

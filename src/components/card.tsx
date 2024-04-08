@@ -6,6 +6,7 @@ import Button from "@/components/button";
 import styles from "@/components/card.module.css";
 import { questions } from "@/questions";
 import Thanks from "@/components/thanks";
+import { CSSTransition } from "react-transition-group";
 
 export default function Card() {
   const [currentQuestion, setCurrentQuestion] = React.useState<number | null>(0);
@@ -20,8 +21,8 @@ export default function Card() {
     if (selectedOption) {
       setAnswers({ ...answers, [currentQuestion!]: selectedOption });
       if (currentQuestion !== null && currentQuestion + 1 < questions.length) {
-        setCurrentQuestion(currentQuestion + 1);
         setSelectedOption(null);
+        setTimeout(() => setCurrentQuestion(currentQuestion + 1), 300);
       } else {
         setCurrentQuestion(null);
       }
@@ -58,7 +59,7 @@ export default function Card() {
   const result = currentQuestion === null ? calculateResult() : null;
 
   return (
-    <div>
+    <div className="animeLeft">
       {currentQuestion !== null ? (
         <>
           <div className={styles.cardHeader}>

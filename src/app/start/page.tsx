@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function StartPage() {
   return (
-    <section className="app bg-secondary">
+    <section className="app bg-secondary animeLeft">
       <div className={`${styles.grafismoRoxo} ${styles.grafismoAzul}`}>
         <div className="container text-center" style={{ zIndex: "12", position: "relative" }}>
           <h1 className="heading-secondary">

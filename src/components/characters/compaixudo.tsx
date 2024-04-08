@@ -1,6 +1,7 @@
 import React from "react";
 import { Props } from "../thanks";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Compaixudo({ result }: Props) {
   React.useEffect(() => {
@@ -20,6 +21,9 @@ export default function Compaixudo({ result }: Props) {
           A compaixão é a virtude que nos faz sentir as dores dos outros como se fossem as nossas, e nos desperta a
           vontade de ajudar.
         </p>
+        <Link href={"/"} className="button">
+          Finalizar
+        </Link>
       </div>
     </>
   );
