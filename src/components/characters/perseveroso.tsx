@@ -21,7 +21,7 @@ export default function Perseveroso({ result }: Props) {
           Ser perseverante é ser dono da sua própria vontade e seguir no caminho desejado, sem desistir quando aparecem
           as dificuldades.
         </p>
-        <Link href={"/"} className="button">
+        <Link href={"/"} className="button" style={{ marginTop: "1rem" }}>
           Finalizar
         </Link>
       </div>

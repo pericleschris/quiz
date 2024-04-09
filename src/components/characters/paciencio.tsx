@@ -21,7 +21,7 @@ export default function Paciencio({ result }: Props) {
           A paciência é a virtude de espera. Saber que cada coisa tem seu tempo e é preciso respeitá-lo. É ter
           tranquilidade, mesmo quando as coisas não estão seguindo do jeito que você gostaria.
         </p>
-        <Link href={"/"} className="button">
+        <Link href={"/"} className="button" style={{ marginTop: "1rem" }}>
           Finalizar
         </Link>
       </div>

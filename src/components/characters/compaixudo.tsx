@@ -21,7 +21,7 @@ export default function Compaixudo({ result }: Props) {
           A compaixão é a virtude que nos faz sentir as dores dos outros como se fossem as nossas, e nos desperta a
           vontade de ajudar.
         </p>
-        <Link href={"/"} className="button">
+        <Link href={"/"} className="button" style={{marginTop: '1rem'}}>
           Finalizar
         </Link>
       </div>

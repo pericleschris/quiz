@@ -74,6 +74,7 @@ p {
   font-family: var(--font-bold);
   color: var(--color-third);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 .text-center {

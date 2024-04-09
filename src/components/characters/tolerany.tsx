@@ -21,7 +21,7 @@ export default function Tolerany({ result }: Props) {
           É a virtude que nos faz reconhecer e aceitar as diferenças no jeito de ser, pensar e agir dos outros. A
           tolerância vem sempre junto com o respeito.
         </p>
-        <Link href={"/"} className="button">
+        <Link href={"/"} className="button" style={{ marginTop: "1rem" }}>
           Finalizar
         </Link>
       </div>
