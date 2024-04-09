@@ -4,6 +4,7 @@ import { fontBold, fontRegular, fontSemiBold, fontLight } from "@/functions/font
 
 export const metadata: Metadata = {
   title: "Game das Virtudes",
+  description: "Game das Virtudes",
 };
 
 export default function RootLayout({
