@@ -5,9 +5,9 @@ export default function HomePage() {
   return (
     <section className="app animeLeft">
       <div className="container">
-        <Image src={"/sesi/assets/logotipo.svg"} width={695} height={242} alt="Logotipo" priority />
+        <Image src={"/assets/logotipo.svg"} width={695} height={242} alt="Logotipo" priority />
         <Image
-          src={"/sesi/assets/personagens.png"}
+          src={"/assets/personagens.png"}
           width={828}
           height={0}
           alt="Personagens"
@@ -20,7 +20,7 @@ export default function HomePage() {
           </Link>
         </div>
         <Image
-          src={"/sesi/assets/logotipo-sesi.svg"}
+          src={"/assets/logotipo-sesi.svg"}
           width={208}
           height={71}
           alt="Logotipo Sesi"

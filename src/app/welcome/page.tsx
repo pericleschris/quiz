@@ -9,7 +9,7 @@ export default function WelcomePage() {
         <div className={styles.subcontainer}>
           <div>
             <Image
-              src={"/sesi/assets/grafismo-setas.svg"}
+              src={"/assets/grafismo-setas.svg"}
               width={695}
               height={61}
               alt="Grafismo"
@@ -33,7 +33,7 @@ export default function WelcomePage() {
           </div>
           <div>
             <Image
-              src={"/sesi/assets/grafismo-setas.svg"}
+              src={"/assets/grafismo-setas.svg"}
               width={695}
               height={61}
               alt="Grafismo"

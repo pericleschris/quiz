@@ -15,7 +15,7 @@ export default function Compaixudo({ result }: Props) {
     <>
       <div className="text-center">
         <h1 className="heading-primary">{result}</h1>
-        <Image src={"/sesi/assets/compaixudo.png"} alt="Compaixudo" width={1000} height={600} />
+        <Image src={"/assets/compaixudo.png"} alt="Compaixudo" width={1000} height={600} />
         <p className="heading-third">A compaixão nos faz entender que todos somos humanos e frágeis</p>
         <p>
           A compaixão é a virtude que nos faz sentir as dores dos outros como se fossem as nossas, e nos desperta a
