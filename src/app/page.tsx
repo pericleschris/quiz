@@ -16,7 +16,7 @@ export default function HomePage() {
         />
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <Link href={"/welcome"} className="button">
-            Entrar
+            Jogar
           </Link>
         </div>
         <Image
