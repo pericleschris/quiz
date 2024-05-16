@@ -15,7 +15,12 @@ export default function Paciencio({ result }: Props) {
     <>
       <div className="text-center">
         <h1 className="heading-primary">{result}</h1>
-        <Image src={"/assets/paciencio.png"} alt="Paciencio" width={1000} height={600} />
+        <Image
+          src={"https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/paciencio.png"}
+          alt="Paciencio"
+          width={1000}
+          height={600}
+        />
         <p className="heading-third">O paciêncio nos ensina que nem tudo acontece como gostaríamos</p>
         <p>
           A paciência é a virtude de espera. Saber que cada coisa tem seu tempo e é preciso respeitá-lo. É ter

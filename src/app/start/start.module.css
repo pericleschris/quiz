@@ -3,7 +3,7 @@
   width: 422px;
   height: 500px;
   display: block;
-  background: url("/assets/grafismo-roxo.png") no-repeat top;
+  background: url("https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/grafismo-roxo.png") no-repeat top;
   background-size: contain;
   top: 0;
   position: absolute;
@@ -15,7 +15,7 @@
   width: 340px;
   height: 369px;
   display: block;
-  background: url("/assets/grafismo-azul.png") no-repeat top;
+  background: url("https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/grafismo-azul.png") no-repeat top;
   background-size: contain;
   right: 0;
   bottom: 0;

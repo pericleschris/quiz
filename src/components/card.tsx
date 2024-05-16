@@ -6,7 +6,6 @@ import Button from "@/components/button";
 import styles from "@/components/card.module.css";
 import { questions } from "@/questions";
 import Thanks from "@/components/thanks";
-import { CSSTransition } from "react-transition-group";
 
 export default function Card() {
   const [currentQuestion, setCurrentQuestion] = React.useState<number | null>(0);

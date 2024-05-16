@@ -9,7 +9,7 @@ export default function WelcomePage() {
         <div className={styles.subcontainer}>
           <div>
             <Image
-              src={"/assets/grafismo-setas.svg"}
+              src={"https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/grafismo-setas.svg"}
               width={695}
               height={61}
               alt="Grafismo"
@@ -33,7 +33,7 @@ export default function WelcomePage() {
           </div>
           <div>
             <Image
-              src={"/assets/grafismo-setas.svg"}
+              src={"https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/grafismo-setas.svg"}
               width={695}
               height={61}
               alt="Grafismo"

@@ -15,13 +15,18 @@ export default function Compaixudo({ result }: Props) {
     <>
       <div className="text-center">
         <h1 className="heading-primary">{result}</h1>
-        <Image src={"/assets/compaixudo.png"} alt="Compaixudo" width={1000} height={600} />
+        <Image
+          src={"https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/compaixudo.png"}
+          alt="Compaixudo"
+          width={1000}
+          height={600}
+        />
         <p className="heading-third">A compaixão nos faz entender que todos somos humanos e frágeis</p>
         <p>
           A compaixão é a virtude que nos faz sentir as dores dos outros como se fossem as nossas, e nos desperta a
           vontade de ajudar.
         </p>
-        <Link href={"/"} className="button" style={{marginTop: '1rem'}}>
+        <Link href={"/"} className="button" style={{ marginTop: "1rem" }}>
           Finalizar
         </Link>
       </div>
