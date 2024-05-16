@@ -1,7 +1,12 @@
+import infoGet from "@/actions/info-get";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const { data } = await infoGet();
+  console.log(data);
+
   return (
     <section className="app animeLeft">
       <div className="container">
