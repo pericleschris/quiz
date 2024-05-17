@@ -1,11 +1,33 @@
+"use client";
 import infoGet from "@/actions/info-get";
+import { INFO } from "@/functions/api";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async function HomePage() {
-  const { data } = await infoGet();
-  console.log(data);
+export default function HomePage() {
+  const searchParams = new URLSearchParams(window.location.search);
+  const ltik = searchParams.get("ltik");
+
+  React.useEffect(() => {
+    async function getLtik() {
+      try {
+        if (!ltik) throw new Error("Lti key não encontrado");
+        const { url } = INFO();
+        const response = await fetch(url, {
+          headers: {
+            Authorization: "Bearer " + ltik,
+          },
+        });
+        if (!response.ok) throw new Error("Falha ao buscar os dados");
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        throw new Error("Falha ao buscar o ltik nos parâmetros: " + error);
+      }
+    }
+    getLtik();
+  }, [ltik]);
 
   return (
     <section className="app animeLeft">
