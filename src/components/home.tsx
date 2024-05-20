@@ -41,6 +41,8 @@ export default function Home() {
     getInfo();
   }, []);
 
+  console.log(info);
+
   return (
     <section className="app animeLeft">
       <div className="container">
