@@ -6,6 +6,7 @@ import React from "react";
 
 type InfoType = {
   ltik: string;
+  name: string;
 };
 
 type PropsInfoType = {
@@ -27,7 +28,10 @@ export default function Home() {
     const getInfo = async () => {
       try {
         const launchInfo = await ky
-          .get("/info", { credentials: "include", headers: { Authorization: "Bearer " + getLtik() } })
+          .get("https://lti-server.azurewebsites.net/info", {
+            credentials: "include",
+            headers: { Authorization: "Bearer " + getLtik() },
+          })
           .json<InfoType>();
         setInfo(launchInfo);
       } catch (err) {
@@ -35,7 +39,9 @@ export default function Home() {
       }
     };
     getInfo();
-  }, []);
+    console.log(info);
+  }, [info]);
+
   return (
     <section className="app animeLeft">
       <div className="container">
@@ -46,6 +52,7 @@ export default function Home() {
           alt="Logotipo"
           priority
         />
+        <p>{info && info.name}</p>
         <Image
           src={"https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/personagens.png"}
           width={828}
