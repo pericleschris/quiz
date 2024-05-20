@@ -39,8 +39,7 @@ export default function Home() {
       }
     };
     getInfo();
-    console.log(info);
-  }, [info]);
+  }, []);
 
   return (
     <section className="app animeLeft">
@@ -52,7 +51,7 @@ export default function Home() {
           alt="Logotipo"
           priority
         />
-        <p>{info && info.name}</p>
+        <p>Nome: {info && info.name}</p>
         <Image
           src={"https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/personagens.png"}
           width={828}
