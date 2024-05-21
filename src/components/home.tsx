@@ -30,6 +30,7 @@ export default function Home() {
         const launchInfo = await ky
           .get("https://lti-server.azurewebsites.net/info", {
             credentials: "include",
+            mode: "cors",
             headers: { Authorization: "Bearer " + getLtik() },
           })
           .json<InfoType>();
