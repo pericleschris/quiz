@@ -1,46 +1,17 @@
 "use client";
-import ky from "ky";
+import UserContext from "@/context/user-context";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
-type InfoType = {
-  ltik: string;
-  name: string;
-};
-
-type PropsInfoType = {
-  info: InfoType | null;
-  setInfo: React.Dispatch<React.SetStateAction<InfoType | null>>;
-};
+import React, { useContext } from "react";
 
 export default function Home() {
-  const [info, setInfo] = React.useState<InfoType | null>(null);
+  const context = useContext(UserContext);
 
-  const getLtik = () => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const ltik = searchParams.get("ltik");
-    if (!ltik) throw new Error("Missing lti key.");
-    return ltik;
-  };
+  if (!context) {
+    return <div>Error: AuthContext is undefined</div>;
+  }
 
-  React.useEffect(() => {
-    const getInfo = async () => {
-      try {
-        const launchInfo = await ky
-          .get("https://lti-server.azurewebsites.net/info", {
-            headers: { Authorization: "Bearer " + getLtik() },
-          })
-          .json<InfoType>();
-        setInfo(launchInfo);
-      } catch (err) {
-        console.error("Failed trying to retrieve custom parameters! " + err);
-      }
-    };
-    getInfo();
-  }, []);
-
-  console.log(info);
+  const { user } = context;
 
   return (
     <section className="app animeLeft">
@@ -52,7 +23,7 @@ export default function Home() {
           alt="Logotipo"
           priority
         />
-        <p>Nome: {info && info.name}</p>
+        <p style={{ textAlign: "center", margin: "1rem 0" }}>Olá, {user && user.name}! Seja bem-vindo!</p>
         <Image
           src={"https://cdn-quiz-a0cze4f3f0hkdjdu.z03.azurefd.net/assets/personagens.png"}
           width={828}

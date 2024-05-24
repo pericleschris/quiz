@@ -1,41 +1,42 @@
 "use client";
-import React from "react";
+import { fetchUserData } from "@/actions/user-get";
+import React, { ReactNode, createContext } from "react";
 
-type LtikType = {
-  ltik: string;
-};
+interface User {
+  name: string;
+  email: string;
+}
 
-type PropsUserContext = {
-  ltik: LtikType | null;
-  setLtik: React.Dispatch<React.SetStateAction<LtikType | null>>;
-};
+interface UserContextType {
+  user: User | null;
+}
 
-const UserContext = React.createContext<PropsUserContext | null>(null);
+interface UserProviderProps {
+  children: ReactNode;
+}
 
-export const useUser = () => {
-  const context = React.useContext(UserContext);
-  if (context === null) {
-    throw new Error("useContext deve estar dentro do Provider");
-  }
-  return context;
-};
+const UserContext = createContext<UserContextType | undefined>(undefined);
 
-export function UserContextProvider({
-  children,
-  tokenLtik,
-}: {
-  children: React.ReactNode;
-  tokenLtik: LtikType | null;
-}) {
-  const [ltik, setLtik] = React.useState<LtikType | null>(null);
+export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+  const [user, setUser] = React.useState<User | null>(null);
 
   React.useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const key = searchParams.get("ltik");
-    if (key) {
-      setLtik({ ltik: key });
+    const urlParams = new URLSearchParams(window.location.search);
+    const ltik = urlParams.get("ltik");
+
+    if (ltik) {
+      fetchUserData(ltik)
+        .then((data) => {
+          setUser(data);
+        })
+        .catch((error: string) => {
+          console.error("Error fetching user data:", error);
+        });
+    } else {
     }
   }, []);
 
-  return <UserContext.Provider value={{ ltik, setLtik }}>{children}</UserContext.Provider>;
-}
+  return <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>;
+};
+
+export default UserContext;

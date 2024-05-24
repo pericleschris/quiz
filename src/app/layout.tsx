@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { fontBold, fontRegular, fontSemiBold, fontLight } from "@/functions/font";
+import { UserProvider } from "@/context/user-context";
 
 export const metadata: Metadata = {
   title: "Game das Virtudes",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${fontBold.variable} ${fontRegular.variable} ${fontSemiBold.variable} ${fontLight.variable}`}>
-        <main>{children}</main>
+        <UserProvider>
+          <main>{children}</main>
+        </UserProvider>
       </body>
     </html>
   );
