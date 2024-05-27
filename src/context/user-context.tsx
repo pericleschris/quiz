@@ -23,10 +23,12 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const ltik = urlParams.get("ltik");
+    if (ltik) localStorage.setItem("ltik", ltik);
 
     async function handleFetch() {
-      if (ltik) {
-        const response = await userGet(ltik);
+      const token = localStorage.getItem("ltik");
+      if (token) {
+        const response = await userGet(token);
         if (response.ok && response.data) {
           setUser(response.data);
         } else {

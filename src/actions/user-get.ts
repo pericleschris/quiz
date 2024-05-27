@@ -10,11 +10,11 @@ interface UserGetResponse {
   error: string;
 }
 
-export default async function userGet(ltik: string): Promise<UserGetResponse> {
+export default async function userGet(token: string): Promise<UserGetResponse> {
   try {
     const response = await fetch("https://lti-server.azurewebsites.net/info", {
       headers: {
-        Authorization: `Bearer ${ltik}`,
+        Authorization: `Bearer ${token}`,
       },
     });
     if (!response.ok) {
