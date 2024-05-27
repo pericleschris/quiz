@@ -1,5 +1,5 @@
 "use client";
-import { fetchUserData } from "@/actions/user-get";
+import userGet from "@/actions/user-get";
 import React, { ReactNode, createContext } from "react";
 
 interface User {
@@ -24,16 +24,18 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     const urlParams = new URLSearchParams(window.location.search);
     const ltik = urlParams.get("ltik");
 
-    if (ltik) {
-      fetchUserData(ltik)
-        .then((data) => {
-          setUser(data);
-        })
-        .catch((error: string) => {
-          console.error("Error fetching user data:", error);
-        });
-    } else {
+    async function handleFetch() {
+      if (ltik) {
+        const response = await userGet(ltik);
+        if (response.ok && response.data) {
+          setUser(response.data);
+        } else {
+          console.error("Erro ao buscar o usuário: ", response.error);
+        }
+      }
     }
+
+    handleFetch();
   }, []);
 
   return <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>;
