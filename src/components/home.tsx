@@ -1,17 +1,11 @@
 "use client";
-import UserContext from "@/context/user-context";
+import { useUser } from "@/context/user-context";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React from "react";
 
 export default function Home() {
-  const context = useContext(UserContext);
-
-  if (!context) {
-    return <div>Error: AuthContext is undefined</div>;
-  }
-
-  const { user } = context;
+  const { user } = useUser();
 
   return (
     <section className="app animeLeft">

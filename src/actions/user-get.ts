@@ -1,4 +1,7 @@
 "use server";
+
+import { cookies } from "next/headers";
+
 export interface User {
   name: string;
   email: string;
@@ -10,7 +13,9 @@ interface UserGetResponse {
   error: string;
 }
 
-export default async function userGet(token: string): Promise<UserGetResponse> {
+export default async function userGet(): Promise<UserGetResponse> {
+  const token = cookies().get("token")?.value;
+
   try {
     const response = await fetch("https://lti-server.azurewebsites.net/info", {
       headers: {
@@ -34,21 +39,3 @@ export default async function userGet(token: string): Promise<UserGetResponse> {
     };
   }
 }
-
-// export const fetchUserData = async (ltik: string): Promise<User> => {
-//   const response = await fetch("https://lti-server.azurewebsites.net/info", {
-//     headers: {
-//       Authorization: `Bearer ${ltik}`,
-//     },
-//   });
-
-//   if (!response.ok) {
-//     throw new Error("Network response was not ok");
-//   }
-
-//   const data = await response.json();
-//   return {
-//     name: data.name,
-//     email: data.email,
-//   };
-// };
